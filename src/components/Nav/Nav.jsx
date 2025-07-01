@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
 import {Link} from "react-router-dom"
-import logo from "../../assets/General/ammuseumLogoShort.png";
+import logo from "../../assets/General/ammuseumLogo.png";
 import menu from "../../assets/cliparts/menu.png"
 import search from "../../assets/cliparts/search.png"
 

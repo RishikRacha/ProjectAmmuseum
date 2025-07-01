@@ -1,9 +1,14 @@
+.carouselDiv {
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+
+
 .carouselContainer {
     width: 100vw;
-    aspect-ratio: 1.6;
+    aspect-ratio: 1.5;
     padding: 40px;
     box-sizing: border-box;
-    margin-top: 120px;
     /* background-color: var(--nav-btn-bg); */
 
     display: flex;

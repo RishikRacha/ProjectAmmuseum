@@ -1,5 +1,5 @@
 :root {
-    --nav-bg-color: hsl(225, 52%, 8%);
+    --nav-bg-color: hsl(215, 52%, 8%);
     /* --nav-btn-bg: rgb(66, 115, 119); */
     --nav-btn-bg: rgb(44, 110, 114);
     --logo-yellow: rgba(241, 163, 59,1);
@@ -17,10 +17,11 @@
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease;
+    z-index: 1000;
 }
 
 .navContainer.opaque {
-    background-color: hsl(225, 52%, 4%);
+    background-color: hsl(210, 42%, 16%);
     height: 60px;
 }
 
@@ -42,6 +43,8 @@
     text-align: center;
     position: relative;
     cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.1s ease;
 }
 
 .navIcon img {
@@ -49,6 +52,13 @@
     height: 100%;
     padding: 8px;
     box-sizing: border-box;
+}
+
+.navIcon:active {
+    border: 2px solid var(--logo-yellow);
+}
+.navIcon:hover {
+    box-shadow: 0 0 8px var(--logo-yellow);
 }
 
 .search img {
@@ -74,7 +84,7 @@
 
 .navButtons.navOpen {
     transform: translateX(0%);
-    background-color: var(--nav-btn-bg);
+    background-color: var(--nav-bg-color);
     box-shadow: 4px 4px 10px rgba(241, 163, 59, 0.7);
 }
 
@@ -96,14 +106,23 @@
 }
 
 .navBtn {
-    background-color: var(--nav-bg-color);
+    border: 2px solid var(--nav-btn-bg);
     padding: 20px;
     width: 50%;
-    color: rgb(241, 163, 59);
+    color: var(--nav-btn-bg);
+
+
     text-decoration: none;
     cursor: pointer;
     margin: 20px;
 
     border-radius: 32px;
     text-align: center;
+}
+
+.navBtn:hover {
+        color: rgb(241, 163, 59);
+    background-color: var(--nav-btn-bg);
+    /* background-color: unset; */
+
 }
