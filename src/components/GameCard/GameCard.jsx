@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Gamecard.css";
-import gameImg1 from "../../assets/GameAssets/gameImg1.jpg";
 import { useNavigate } from "react-router-dom";
 
 function GameCard(gameInfo) {
@@ -12,7 +11,7 @@ function GameCard(gameInfo) {
 
 
     return (
-        <div className="gameCardContainer" onClick={() => clickHandler(_id)}>
+        <div className="gameCardContainer" onClick={() => clickHandler(gameInfo._id)}>
             <div className="gameImgDiv">
                 <img src={gameInfo.image} alt="gameImg1" className="gameImg" />
             </div>
