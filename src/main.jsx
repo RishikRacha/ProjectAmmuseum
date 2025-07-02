@@ -5,11 +5,12 @@ import {Provider} from 'react-redux'
 
 import './index.css'
 import App from './App.jsx'
+import myStore from './redux/store.js'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-  {/* <Provider> */}
+  <Provider store={myStore}>
     <App />
-  {/* </Provider> */}
+  </Provider>
   </BrowserRouter>
 )
