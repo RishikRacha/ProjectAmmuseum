@@ -39,18 +39,12 @@ function GamesList({gameInfo = []}) {
 
 
     return (
-        <div className="gamesListDiv">
-            <h1>Our Fav Games</h1>
-            <hr /><br /><br /><br /><hr /> {/* need to add filter icons */}
-            <h2>Sub Title</h2>
             <div className="gamesDivContainer">
-
                 {gameInfo.map((game, index) => (
-                    <GameCard {...game}/>
+                    <GameCard {...game} key={index}/>
                 ))}
 
             </div>
-        </div>
     );
 }
 

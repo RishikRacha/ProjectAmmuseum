@@ -13,7 +13,7 @@ function GameCard(gameInfo) {
     return (
         <div className="gameCardContainer" onClick={() => clickHandler(gameInfo._id)}>
             <div className="gameImgDiv">
-                <img src={gameInfo.image} alt="gameImg1" className="gameImg" />
+                <img src={gameInfo.image[0]} alt={`image of ${gameInfo.name}`} className="gameImg" />
             </div>
             <div className="gameCardInfo">
                 <h2>{gameInfo.name}</h2>

@@ -32,7 +32,7 @@ function Nav() {
             <div className={`navButtons ${navOpen ? 'navOpen' : ''}`}>
                 <div className={`navOverlay ${navOpen ? 'navOpen' : ''}`} onClick={toggleNav}></div>
                 <Link className="navBtn" to='/'>Home</Link>
-                <Link className="navBtn">Board Games</Link>
+                <Link className="navBtn" to='/board-games'>Board Games</Link>
                 <Link className="navBtn">Events</Link>
             </div>
 
