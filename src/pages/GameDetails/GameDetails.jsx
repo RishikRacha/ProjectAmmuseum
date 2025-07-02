@@ -30,7 +30,7 @@ function GameDetails() {
             .catch(err => {res.send(err)})
     },[]);
 
-    let images = [gameImg1, ...game.image, ammuseumLogo]
+    let images = [...game.image, ammuseumLogo]
 
 return (
     <div> <Nav />

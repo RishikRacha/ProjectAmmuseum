@@ -16,8 +16,8 @@ function GameCard(gameInfo) {
                 <img src={gameInfo.image[0]} alt={`image of ${gameInfo.name}`} className="gameImg" />
             </div>
             <div className="gameCardInfo">
-                <h2>{gameInfo.name}</h2>
-                <h4>Difficulty: {gameInfo.difficulty} ★</h4>
+                <div className="gameCardTitleContainer"><h3>{gameInfo.name}</h3></div>
+                <h4>★ {gameInfo.level} strategy</h4>
             </div>
         </div>
     );

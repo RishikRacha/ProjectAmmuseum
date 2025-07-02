@@ -3,8 +3,8 @@
     border: 2px solid var(--nav-btn-bg);
     box-sizing: border-box;
     width: 100%;
-    aspect-ratio: 0.75;
-    /* overflow: hidden; */
+    aspect-ratio: 0.65;
+    overflow: hidden;
 
     transition: all 0.2s ease;
 }
@@ -17,12 +17,14 @@
 
 .gameImgDiv {
     width: 100%;
-    height: 75%;
+    aspect-ratio: 1;
+    /* height: 75%; */
 }
 
 .gameImg {
     height: 100%;
-    object-fit: contain;
+    width: 100%;
+    object-fit: cover;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -33,10 +35,24 @@
 
 .gameCardInfo {
     padding: 0 10px;
+
 }
-.gameCardInfo h2 {
+.gameCardInfo h3 {
     margin: 0;
+    line-height:1.15;
+    
 }
 .gameCardInfo h4 {
     margin: 0;
+    color: rgb(207, 250, 239);
+    font-size: smaller;
+}
+.gameCardTitleContainer {
+    width: 100%;
+    aspect-ratio: 3;
+    overflow: hidden;
+    /* background-color: #010000; */
+    display: flex;
+    align-items: center;
+
 }

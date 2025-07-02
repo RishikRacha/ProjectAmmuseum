@@ -1,8 +1,8 @@
 import React from "react";
 import "./Carousel.css";
 import carousel1 from "../../assets/carousel/ammuseumLogo.jpg";
-import carousel2 from "../../assets/carousel/carousel2.jpg";
-import carousel3 from "../../assets/carousel/carousel3.jpg";
+import carousel2 from "../../assets/carousel/botcPic.jpg";
+import carousel3 from "../../assets/carousel/event.jpg";
 
 function Carousel() {
     const images = [carousel1, carousel2, carousel3];
