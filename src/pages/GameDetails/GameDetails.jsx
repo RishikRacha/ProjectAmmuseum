@@ -9,6 +9,7 @@ import ammuseumLogo from "../../assets/General/ammuseumLogoShort.png"
 
 
 function GameDetails() {
+    const apiUrl = import.meta.env.VITE_API_URL;
     const [searchParams, setSearchParams] = useSearchParams();
     const [game, setGame] = useState({
         _id:'',
@@ -23,7 +24,7 @@ function GameDetails() {
 
     useEffect(() => {
         axios
-            .get('http://localhost:6969/api/games/get-one-game?id='+id)
+            .get(apiUrl+'/api/games/get-one-game?id='+id)
             .then((res) => {
                 setGame(res.data.result);
             })

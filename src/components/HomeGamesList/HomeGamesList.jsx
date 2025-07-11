@@ -7,7 +7,8 @@ import axios from "axios";
 import { defaultsActionCreator } from "../../redux/myAction";
 
 function HomeGamesList() {
-
+    
+    const apiUrl = import.meta.env.VITE_API_URL;
     // const [allGames, setAllGames] = useState();
     const defaultGamesDispatch = useDispatch();
     const defaultGames = useSelector((store) => store.defaultGames);
@@ -15,11 +16,15 @@ function HomeGamesList() {
 
     const getDefaultGames = () => {
         axios
-            .get('http://localhost:6969/api/games/get-defaults')
+            .get(`${apiUrl}/api/games/get-defaults`)
             .then((res) => {
                 console.log("defaults api called");
+                console.log(apiUrl);
                 // setAllGames(res.data.result);
                 defaultGamesDispatch(defaultsActionCreator(res.data.result));
+            })
+            .catch((err) => {
+                console.error("defaults api failed", err);
             });
 
         
